@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravity Collective - Discover India's Ambitious Spirit</title>
+    <title>Gravity - Discover India's Ambitious Spirit</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>Gravity Collective</h1>
+                    <h1>Gravity</h1>
                 </div>
                 <nav class="nav">
                     <a href="#inspirations" class="nav-link">Inspirations</a>
@@ -23,13 +23,49 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Discover India's Ambitious Spirit</h1>
-                <p class="hero-subtitle">Immersive journeys through deep-rooted culture and entrepreneurial energy</p>
-                <button class="btn btn-hero">Start Your Journey</button>
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <div class="carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=1920" alt="Colorful Holi festival celebration with crowds" class="carousel-image">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h1 class="carousel-title">Where millions unite in celebration</h1>
+                            <p class="carousel-caption">Experience the scale and energy of India's grand festivals</p>
+                            <button class="btn btn-hero" onclick="scrollToSection('#inspirations')">Discover More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1751122804/pplx_project_search_images/8dde8d5b936ce255deda05103823ec282b061da4.jpg" alt="Close-up street food vendor preparing traditional Indian snacks" class="carousel-image">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h1 class="carousel-title">The pulse of entrepreneurship</h1>
+                            <p class="carousel-caption">From street vendors to skyscrapers, ambition drives every corner</p>
+                            <button class="btn btn-hero" onclick="scrollToSection('#inspirations')">Explore Journeys</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=1920" alt="Diverse group of people in traditional Indian setting" class="carousel-image">
+                    <div class="carousel-overlay">
+                        <div class="carousel-content">
+                            <h1 class="carousel-title">Unity in diversity</h1>
+                            <p class="carousel-caption">Where different cultures, ideas, and dreams converge to create something extraordinary</p>
+                            <button class="btn btn-hero" onclick="scrollToSection('#inspirations')">Start Your Journey</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" id="prevSlide">‹</button>
+                <button class="carousel-btn next" id="nextSlide">›</button>
+            </div>
+            <div class="carousel-indicators" id="carouselIndicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
             </div>
         </div>
     </section>
@@ -41,51 +77,51 @@
             <div class="cards-container">
                 <div class="cards-scroll" id="philosophyCards">
                     <div class="inspiration-card">
-                        <img src="https://images.unsplash.com/photo-1516450137517-162bfbeb8dba?w=400" alt="Festivals & Unity" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800" alt="Festivals & Unity" class="card-image">
                         <div class="card-overlay">
                             <h3 class="card-title">Festivals & Unity</h3>
-                            <p class="card-description">Experience the grandeur and emotional depth of Indian celebrations, from Holi's vibrant colors to wedding magnificence.</p>
+                            <p class="card-description">Experience India's grand celebrations where millions unite in joy, demonstrating organizational scale and cultural cohesion that drives business success.</p>
                         </div>
                     </div>
                     <div class="inspiration-card">
-                        <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400" alt="Entrepreneurial Hustle" class="card-image">
+                        <img src="https://media.istockphoto.com/id/499781514/photo/indian-street-vendor-preparing-food-chapatti-flat-bread.jpg" alt="Entrepreneurial Hustle" class="card-image">
                         <div class="card-overlay">
                             <h3 class="card-title">Entrepreneurial Hustle</h3>
-                            <p class="card-description">Discover Mumbai's street vendors earning ₹24 lakh annually and the startup ecosystem driving global innovation.</p>
+                            <p class="card-description">From street vendors earning lakhs to startup unicorns, witness the relentless drive and creative problem-solving that defines Indian business culture.</p>
                         </div>
                     </div>
                     <div class="inspiration-card">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Spiritual Depth" class="card-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1751122804/pplx_project_search_images/c0e444904572847445d38ef6d6bff3adabdc5f6b.jpg" alt="Spiritual Depth" class="card-image">
                         <div class="card-overlay">
                             <h3 class="card-title">Spiritual Depth</h3>
-                            <p class="card-description">Find harmony in Varanasi's 3,000-year-old traditions and the timeless wisdom of Indian philosophy.</p>
+                            <p class="card-description">Discover how ancient wisdom traditions continue to influence modern business practices and personal development approaches.</p>
                         </div>
                     </div>
                     <div class="inspiration-card">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400" alt="Startup Energy" class="card-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1748567626/pplx_project_search_images/df9a89a570381959137fdba5c4dc38fb4285d100.jpg" alt="Startup Energy" class="card-image">
                         <div class="card-overlay">
                             <h3 class="card-title">Startup Energy</h3>
-                            <p class="card-description">Immerse yourself in Bangalore's tech revolution and the ambitious spirit reshaping India's future.</p>
+                            <p class="card-description">Mumbai and Bangalore pulse with innovation energy, where billion-dollar companies emerge from small ideas and massive ambitions.</p>
                         </div>
                     </div>
                     <div class="inspiration-card">
-                        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400" alt="Diverse Heritage" class="card-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1748562467/pplx_project_search_images/8d3b7ca40100a8d6a0ee7953d454f17a3aaf9e47.jpg" alt="Diverse Heritage" class="card-image">
                         <div class="card-overlay">
                             <h3 class="card-title">Diverse Heritage</h3>
-                            <p class="card-description">Witness how India's vast population creates harmony and innovation through cultural diversity.</p>
+                            <p class="card-description">Navigate India's incredible diversity as a competitive advantage, learning how different perspectives drive innovation and growth.</p>
                         </div>
                     </div>
                     <div class="inspiration-card">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400" alt="Ambitious Dreams" class="card-image">
+                        <img src="https://inc42.com/cdn-cgi/image/quality=75/https://asset.inc42.com/2023/09/spacetech-launch-article-ftr.png" alt="Ambitious Dreams" class="card-image">
                         <div class="card-overlay">
                             <h3 class="card-title">Ambitious Dreams</h3>
-                            <p class="card-description">Meet visionaries from all backgrounds turning dreams into reality in India's dynamic landscape.</p>
+                            <p class="card-description">Meet visionaries building the future - from space technology to sustainable solutions, India's ambition knows no bounds.</p>
                         </div>
                     </div>
                 </div>
                 <div class="scroll-indicators">
-                    <button class="scroll-btn scroll-left" id="scrollLeft">&lt;</button>
-                    <button class="scroll-btn scroll-right" id="scrollRight">&gt;</button>
+                    <button class="scroll-btn scroll-left" id="scrollLeft">‹</button>
+                    <button class="scroll-btn scroll-right" id="scrollRight">›</button>
                 </div>
             </div>
         </div>
@@ -100,82 +136,66 @@
                     <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600" alt="15-Day All India Experience" class="trip-image">
                     <div class="trip-content">
                         <h3 class="trip-title">15-Day All India Experience</h3>
-                        <p class="trip-description">The ultimate journey across Delhi, Mumbai, Rajasthan, Kerala, Varanasi, and beyond.</p>
-                        <p class="trip-duration">15 days</p>
-                        <p class="trip-highlights">Delhi • Agra • Jaipur • Mumbai • Udaipur • Jodhpur • Munnar • Alleppey • Varanasi • Kolkata</p>
-                        <button class="btn btn-trip">Explore Journey</button>
+                        <p class="trip-description">The ultimate journey across India's entrepreneurial and cultural landscape - from Delhi's power corridors to Mumbai's startup hubs, Rajasthan's royal heritage to Kerala's innovation centers.</p>
+                        <p class="trip-duration">15 Days</p>
+                        <p class="trip-highlights">Delhi & Mumbai Business Districts • Jaipur & Udaipur Cultural Heritage • Bangalore Startup Ecosystem • Varanasi Spiritual Depth</p>
+                        <button class="btn btn-trip">View Details</button>
                     </div>
                 </div>
                 <div class="trip-card">
                     <img src="https://images.unsplash.com/photo-1574873215251-c49d54466f23?w=600" alt="8-Day North India Focus" class="trip-image">
                     <div class="trip-content">
                         <h3 class="trip-title">8-Day North India Focus</h3>
-                        <p class="trip-description">Deep cultural immersion in the Golden Triangle plus spiritual Varanasi.</p>
-                        <p class="trip-duration">8 days</p>
-                        <p class="trip-highlights">Delhi • Agra • Jaipur • Varanasi</p>
-                        <button class="btn btn-trip">Explore Journey</button>
+                        <p class="trip-description">Concentrated cultural and business immersion in India's historical and commercial heartland - perfect for understanding the roots of Indian ambition and innovation.</p>
+                        <p class="trip-duration">8 Days</p>
+                        <p class="trip-highlights">Delhi Business & Politics • Agra's Architectural Ambition • Jaipur's Royal Entrepreneurship • Varanasi's Eternal Innovation</p>
+                        <button class="btn btn-trip">View Details</button>
                     </div>
                 </div>
                 <div class="trip-card">
                     <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600" alt="5-Day Spiritual Journey" class="trip-image">
                     <div class="trip-content">
                         <h3 class="trip-title">5-Day Spiritual Journey</h3>
-                        <p class="trip-description">Pilgrimage to India's spiritual heart through sacred cities and ancient traditions.</p>
-                        <p class="trip-duration">5 days</p>
-                        <p class="trip-highlights">Varanasi • Haridwar • Rishikesh</p>
-                        <button class="btn btn-trip">Explore Journey</button>
+                        <p class="trip-description">Deep dive into India's spiritual-business nexus, exploring how ancient wisdom drives modern success in the holy cities of the Ganges.</p>
+                        <p class="trip-duration">5 Days</p>
+                        <p class="trip-highlights">Varanasi Spiritual Business • Haridwar Sacred Economy • Rishikesh Wellness Innovation • Temple Entrepreneurship</p>
+                        <button class="btn btn-trip">View Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- About Us / Founders Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Visionary Founders</h2>
+            <h2 class="section-title">Meet Our Founders</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300" alt="Mredul Sarda" class="team-image">
+                    <img src="https://www.entrepreneurindia.com/tech25web/images/speakers/mredul.png" alt="Mredul Sarda" class="team-image">
                     <div class="team-content">
                         <h3 class="team-name">Mredul Sarda</h3>
-                        <p class="team-role">Founder & Vision</p>
-                        <ul class="team-credentials">
-                            <li>Leader of Tomorrow - St. Gallen Symposium</li>
-                            <li>Forbes 30 Under 30 (2025)</li>
-                            <li>Founder of Riceberg Ventures</li>
-                            <li>IIT Bombay Alumni</li>
-                        </ul>
-                        <p class="team-description">Travel ignited my passion for connecting people and ideas across continents.</p>
-                        <a href="https://linkedin.com/in/mredul-sarda" target="_blank" class="linkedin-link">Connect on LinkedIn</a>
+                        <p class="team-role">Forbes 30 Under 30 | Founding Partner, Riceberg Ventures</p>
+                        <p class="team-description">Mredul embodies the entrepreneurial spirit that defines modern India. As a Founding Partner at Riceberg Ventures and Forbes 30 Under 30 Asia honoree, he has channeled his IIT Bombay engineering background into building one of India's leading deep-tech venture capital funds. His journey from launching India's first student satellite to scaling fintech unicorn Slice demonstrates the transformative power of ambition. Through Gravity, Mredul shares his belief that travel creates the cross-cultural connections that fuel innovation and personal growth.</p>
+                        <a href="https://www.linkedin.com/in/mredul-sarda/" target="_blank" class="linkedin-link">🔗 Connect on LinkedIn</a>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300" alt="Lino Gandola" class="team-image">
+                    <img src="https://www.entrepreneurindia.com/ai/images/speakers/lino.png" alt="Lino Gandola" class="team-image">
                     <div class="team-content">
                         <h3 class="team-name">Lino Gandola</h3>
-                        <p class="team-role">Strategic Partner</p>
-                        <ul class="team-credentials">
-                            <li>St. Gallen Alumni</li>
-                            <li>Founding Partner - Riceberg Ventures</li>
-                            <li>Global Innovation Expert</li>
-                        </ul>
-                        <p class="team-description">Diverse perspectives from my travels fuel my commitment to building transformative communities.</p>
-                        <a href="https://linkedin.com/in/lino-gandola" target="_blank" class="linkedin-link">Connect on LinkedIn</a>
+                        <p class="team-role">Founding Partner, Riceberg Ventures | St. Gallen Alumni</p>
+                        <p class="team-description">Lino brings a unique European perspective to India's startup ecosystem. A University of St. Gallen alumnus with deep roots in Switzerland's innovation culture, he has spent years building bridges between European capital and Indian entrepreneurship. His work organizing global events like the St. Gallen Symposium and START Summit has taught him that the most powerful learning happens when diverse perspectives collide. Lino's vision for Gravity stems from his conviction that understanding India's entrepreneurial culture is essential for any global business leader.</p>
+                        <a href="https://uk.linkedin.com/in/lino-gandola-a13773160" target="_blank" class="linkedin-link">🔗 Connect on LinkedIn</a>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=300" alt="Adarsh Goyal" class="team-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQH0q3T9n5eN7Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1705822491016?e=2147483647&v=beta&t=lBkwiO8wr0Y1UajiFZxdQb81FU0eqSo7Olq7U_j3bWw" alt="Adarsh Goyal" class="team-image">
                     <div class="team-content">
                         <h3 class="team-name">Adarsh Goyal</h3>
-                        <p class="team-role">Operations Director</p>
-                        <ul class="team-credentials">
-                            <li>IIT Roorkee Alumni</li>
-                            <li>Founder of Dharmik</li>
-                            <li>Spiritual Travel Expert</li>
-                        </ul>
-                        <p class="team-description">My travels deepened my understanding of spirituality and entrepreneurship.</p>
-                        <a href="https://linkedin.com/in/adarsh-goyal" target="_blank" class="linkedin-link">Connect on LinkedIn</a>
+                        <p class="team-role">Founder, Dharmik | IIT Roorkee Alumni</p>
+                        <p class="team-description">Adarsh represents the new generation of Indian entrepreneurs who seamlessly blend tradition with technology. As founder of Dharmik, he has created innovative solutions that connect spiritual practices with modern convenience, serving millions of devotees across India. His IIT Roorkee engineering foundation, combined with deep cultural understanding, positions him uniquely to help travelers appreciate India's complexity. Adarsh believes that true cultural immersion comes not just from observing traditions, but from understanding how they evolve and adapt in contemporary India.</p>
+                        <a href="https://in.linkedin.com/in/adarsh-goyal007" target="_blank" class="linkedin-link">🔗 Connect on LinkedIn</a>
                     </div>
                 </div>
             </div>
