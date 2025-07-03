@@ -16,7 +16,7 @@
             heading: "Entrepreneurial Hustle",
             paragraph: "Street entrepreneurship is India's heartbeat: 10 million vendors power ₹8,000 crores of daily commerce. Top vada-pav sellers in Mumbai earn ₹24 lakh a year – proof that ambition starts at sidewalk level.",
             stats: ["₹8,000 cr daily vendor turnover","10 m vendors nation-wide","₹24 lakh top vendor income"],
-            image: "https://c8.alamy.com/comp/2X70Y1T/local-man-buying-food-from-street-vendor-in-india-maharashtra-nashik-2X70Y1T.jpg"
+            image: "assets/img/1751554438693.png"
         },
         spiritual: {
             heading: "Spiritual Depth",
@@ -28,7 +28,7 @@
             heading: "Startup Energy",
             paragraph: "With 100,000 registered startups and 115 unicorns, India ranks #3 globally. Bengaluru alone attracted $7.5 billion VC in 2024, driving AI, SaaS, and fintech breakthroughs.",
             stats: ["100k+ startups","115 unicorns","$7.5 bn VC in BLR 2024"],
-            image: "https://www.startupinsider.in/wp-content/uploads/2022/04/Startup-Company-In-Bangalor.jpg"
+            image: "assets/img/1751554434916.png"
         },
         heritage: {
             heading: "Diverse Heritage",
@@ -493,14 +493,14 @@
             }
         },
 
-        // Initialize journey buttons to show immersive pages
+        // Initialize journey buttons to navigate to journey details page
         initializeJourneyButtons() {
             try {
                 this.elements.journeyButtons.forEach(button => {
                     button.addEventListener('click', (e) => {
                         e.preventDefault();
-                        const journey = button.getAttribute('data-journey');
-                        this.showJourneyExperience(journey);
+                        // Navigate to the journey details page
+                        window.location.href = 'india-journey-updated/india-journey-updated.html';
                     });
                 });
             } catch (error) {
@@ -894,7 +894,8 @@
                     `Sent from Gravity Travel Website`
                 );
 
-                const mailtoUrl = `mailto:mredul.sarda@gmail.com?subject=${subject}&body=${body}`;
+                // const mailtoUrl = `mailto:mredul.sarda@gmail.com?subject=${subject}&body=${body}`;
+                const mailtoUrl = `mailto:mredul@riceberg.vc?subject=${subject}&body=${body}`;
 
                 // Open mailto in new tab
                 window.open(mailtoUrl, '_blank');
