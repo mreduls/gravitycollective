@@ -271,3 +271,80 @@ document.addEventListener('DOMContentLoaded', function() {
 
   console.log('Travel timeline application initialized successfully');
 });
+
+// Journey conditional rendering functionality
+function initializeJourneyFilter() {
+  // Journey configuration
+  const journeyConfig = {
+    'all-india': {
+      title: '15-Day All India Experience',
+      subtitle: 'From Spiritual Awakening to Startup Innovation',
+      articles: ['rishikesh', 'delhi', 'agra', 'jaipur', 'mumbai', 'bangalore']
+    },
+    'north-india': {
+      title: '8-Day North India Focus',
+      subtitle: 'Golden Triangle plus Varanasi - Cultural Immersion',
+      articles: ['rishikesh', 'delhi', 'agra', 'jaipur']
+    },
+    'religious': {
+      title: '5-Day Religious Pilgrimage',
+      subtitle: 'Spiritual Transformation Through Sacred Sites',
+      articles: ['rishikesh']
+    }
+  };
+
+  // Get journey type from URL parameters
+  function getJourneyTypeFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('journey') || 'all-india'; // Default to all-india
+  }
+
+  // Update page content based on journey type
+  function updatePageContent(journeyType) {
+    const config = journeyConfig[journeyType];
+    if (!config) {
+      console.warn('Unknown journey type:', journeyType);
+      return;
+    }
+
+    // Update title and subtitle
+    const titleElement = document.getElementById('journey-title');
+    const subtitleElement = document.getElementById('journey-subtitle');
+    
+    if (titleElement) titleElement.textContent = config.title;
+    if (subtitleElement) subtitleElement.textContent = config.subtitle;
+
+    // Show/hide articles based on journey type
+    const allArticles = document.querySelectorAll('.destination');
+    
+    allArticles.forEach(article => {
+      const articleId = article.id;
+      const journeyData = article.getAttribute('data-journey');
+      
+      if (config.articles.includes(articleId) && journeyData && journeyData.includes(journeyType)) {
+        article.style.display = 'block';
+        article.classList.add('visible');
+      } else {
+        article.style.display = 'none';
+        article.classList.remove('visible');
+      }
+    });
+
+    console.log(`Loaded ${journeyType} journey with ${config.articles.length} destinations`);
+  }
+
+  // Initialize journey filtering
+  const journeyType = getJourneyTypeFromURL();
+  updatePageContent(journeyType);
+
+  // Listen for journey changes (if navigating between different journey types)
+  window.addEventListener('popstate', () => {
+    const newJourneyType = getJourneyTypeFromURL();
+    updatePageContent(newJourneyType);
+  });
+
+  console.log('Journey filter initialized for:', journeyType);
+}
+
+// Call the journey filter initialization
+initializeJourneyFilter();
