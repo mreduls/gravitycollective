@@ -500,7 +500,7 @@
                     button.addEventListener('click', (e) => {
                         e.preventDefault();
                         // Navigate to the journey details page
-                        window.location.href = 'india-journey-updated/india-journey-updated.html';
+                        window.location.href = 'india-journey-updated.html';
                     });
                 });
             } catch (error) {
