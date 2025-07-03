@@ -499,8 +499,9 @@
                 this.elements.journeyButtons.forEach(button => {
                     button.addEventListener('click', (e) => {
                         e.preventDefault();
-                        // Navigate to the journey details page
-                        window.location.href = 'india-journey-updated.html';
+                        const journey = button.getAttribute('data-journey');
+                        // Navigate to the journey details page with journey parameter
+                        window.location.href = `india-journey-updated.html?journey=${journey}`;
                     });
                 });
             } catch (error) {
