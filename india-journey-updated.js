@@ -278,17 +278,17 @@ function initializeJourneyFilter() {
   const journeyConfig = {
     'all-india': {
       title: '15-Day All India Experience',
-      subtitle: 'From Spiritual Awakening to Startup Innovation',
+      subtitle: '21st October onwards, from Spiritual Awakening to Startup Innovation!',
       articles: ['rishikesh', 'delhi', 'agra', 'jaipur', 'mumbai', 'bangalore']
     },
     'north-india': {
       title: '8-Day North India Focus',
-      subtitle: 'Golden Triangle plus Varanasi - Cultural Immersion',
+      subtitle: '21st October onwards, Golden Triangle plus Varanasi - Cultural Immersion',
       articles: ['rishikesh', 'delhi', 'agra', 'jaipur']
     },
     'religious': {
       title: '5-Day Religious Pilgrimage',
-      subtitle: 'Spiritual Transformation Through Sacred Sites',
+      subtitle: '21st October onwards, Spiritual Transformation Through Sacred Sites',
       articles: ['rishikesh']
     }
   };
